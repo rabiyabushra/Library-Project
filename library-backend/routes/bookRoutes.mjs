@@ -7,7 +7,7 @@ const router = express.Router()
 
 router.get('/', getBooks)
 
-router.post('/', authMiddleware, roleMiddleware('admin', 'librarian'), addBook)
+router.post('/', authMiddleware, roleMiddleware('admin', 'librarian'), addBook)  
 
 router.put('/:id', authMiddleware, roleMiddleware('admin', 'librarian'), updateBook)
 
